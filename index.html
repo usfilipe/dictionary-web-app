@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Dictionary Web App</title>
+  </head>
+  <body>
+    <section class="main padding">
+      <nav>
+        <div class="book">
+          <img src="icons/book.svg" alt="Book Icon" />
+        </div>
+
+        <div class="options">
+          <div class="fonts">
+            <p>Sans Serif</p>
+            <img src="icons/arrow.svg" alt="Arrow Icon" />
+          </div>
+
+          <span class="line"></span>
+
+          <div class="dark">
+            <label class="switch">
+              <input type="checkbox" id="toggle-button" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <img src="icons/moon-g.svg" alt="Moon icon dark theme" />
+        </div>
+      </nav>
+      <div class="search">
+        <div class="div-search">
+          <input
+            class="input-search"
+            type="search"
+            id="getword"
+            placeholder="Search for any word..."
+          />
+          <p class="txt-empty remove" id="txt-empty">Whoops, can’t be empty…</p>
+        </div>
+
+        <button class="btn-search" onclick="getWord()">
+          <img src="icons/search.svg" alt="Search Icon" />
+        </button>
+      </div>
+    </section>
+
+    <section class="results padding">
+      <div class="word-wrap">
+        <div id="tittle">
+          <h1 class="word" id="word"></h1>
+          <span class="pron" id="pron"></span>
+        </div>
+        <button class="btn-play remove">
+          <img src="icons/play-light.svg" alt="Play button" />
+        </button>
+      </div>
+
+      <div class="meaning" id="meaning"></div>
+    </section>
+
+    <section class="source padding" id="source">
+      <div class="line-meaning"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
