@@ -6,41 +6,27 @@ async function getWord() {
   const meaning = document.getElementById("meaning");
   const tittle = document.getElementById("tittle");
   const textEmpty = document.getElementById("txt-empty");
-<<<<<<< HEAD
+
   const notFound = document.getElementById("not-found");
   const newAudio = document.getElementById("my-audio");
   const addSound = document.getElementById("btn-play");
 
   meaning.innerHTML = "";
 
-=======
-
-  meaning.innerHTML = "";
-
   sField.classList.remove("input-empty");
   textEmpty.classList.add("remove");
   tittle.classList.remove("remove");
+  notFound.classList.add("remove");
 
->>>>>>> 0ef6e34a0e1d4c862e9e0f1ea9e082ef95a1d451
   if (!wordS) {
     sField.classList.add("input-empty");
     textEmpty.classList.remove("remove");
     tittle.classList.add("remove");
-<<<<<<< HEAD
+
     addSound.classList.add("remove");
     return;
   }
 
-  notFound.classList.add("remove");
-  sField.classList.remove("input-empty");
-  textEmpty.classList.add("remove");
-  tittle.classList.remove("remove");
-
-=======
-    return;
-  }
-
->>>>>>> 0ef6e34a0e1d4c862e9e0f1ea9e082ef95a1d451
   try {
     const response = await fetch(url + wordS);
     const dataA = await response.json();
@@ -48,7 +34,6 @@ async function getWord() {
     const word = data.word;
     const pron = data.phonetics[0].text;
 
-<<<<<<< HEAD
     // audio
 
     let audioSrc = data.phonetics[0].audio;
@@ -62,7 +47,6 @@ async function getWord() {
           newAudio.play();
         });
       newAudio.load();
-
       addSound.classList.remove("remove");
     } else {
       newAudio.load();
@@ -70,8 +54,6 @@ async function getWord() {
       addSound.classList.add("remove");
     }
 
-=======
->>>>>>> 0ef6e34a0e1d4c862e9e0f1ea9e082ef95a1d451
     const meaningL = data.meanings.length;
 
     console.log(data);
@@ -126,12 +108,10 @@ async function getWord() {
     meaning.classList.remove("remove");
   } catch (err) {
     console.log(err);
-<<<<<<< HEAD
+
     notFound.classList.remove("remove");
     tittle.classList.add("remove");
     addSound.classList.add("remove");
-=======
->>>>>>> 0ef6e34a0e1d4c862e9e0f1ea9e082ef95a1d451
   }
 }
 

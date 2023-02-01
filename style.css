@@ -266,11 +266,7 @@ h3 {
 }
 
 .remove {
-<<<<<<< HEAD
   display: none !important;
-=======
-  display: none;
->>>>>>> 0ef6e34a0e1d4c862e9e0f1ea9e082ef95a1d451
 }
 
 ul {
@@ -309,7 +305,6 @@ ul li::before {
 .black {
   color: white;
 }
-<<<<<<< HEAD
 
 /*========== Not Found ==========*/
 
@@ -336,5 +331,3 @@ ul li::before {
   text-align: center;
   color: #757575;
 }
-=======
->>>>>>> 0ef6e34a0e1d4c862e9e0f1ea9e082ef95a1d451
